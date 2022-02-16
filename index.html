@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment and Post</title>
+</head>
+<body>
+    <section id="x">
+        <h2>Add your Comment!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident mollitia, quisquam distinctio necessitatibus saepe delectus qui aliquid soluta molestiae deserunt quos, ducimus nemo aperiam deleniti! Odit aut sunt mollitia!</p>
+        <p>Iusto praesentium molestiae ea architecto. Suscipit porro, et alias illo facilis consequuntur unde mollitia dolorem dolores culpa asperiores itaque quod adipisci libero magnam eius, beatae reiciendis quasi perspiciatis officiis odio!</p>
+        <p>Optio, voluptates? Quam corrupti ducimus quia reprehenderit illum assumenda odio at quibusdam laudantium numquam unde aperiam, et obcaecati doloremque quisquam excepturi commodi ex culpa officiis rerum quae odit debitis? Tempora.</p>
+
+        <h2>All comments: </h2>
+        
+    </section>
+    <br>
+    <section>
+        <textarea name="tarea" id="tarea" cols="50" rows="10"></textarea>
+        <br>
+        <button id="post">Post</button>
+    </section>
+    
+    <script>
+        document.getElementById("post").addEventListener("click",function(){
+            const getpost = document.getElementById("tarea");
+            // console.log(tarea.value);
+
+            const  getp = document.createElement("p");
+            getp.innerHTML = getpost.value;
+
+            const postp = document.getElementById("x");
+            postp.appendChild(getp);
+            getpost.value = '';
+        })
+    </script>
+
+</body>
+</html>
